@@ -5,17 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
 
+    <!-- Linked the "main.css stylesheet" -->
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <header>
+        <!-- Main Heading -->
         <h1>Task List</h1>
+        <!-- Task input field -->
         <form id="new-task-form">
-            <input type="text" id="new-task-input" placeholder="Write some tasks here"/>
-            <input type="submit" value="Add task"/>
+            <input 
+                type="text" 
+                id="new-task-input" 
+                placeholder="Write some tasks here"/>
+        <!-- Task submit button -->
+            <input 
+                type="submit" 
+                id="new-task-submit"
+                value="Add task"/>
         </form>
     </header>
 
+    <main>
+        <!-- Tasks heading -->
+        <section class="task-list">
+            <h2>Tasks</h2>
+
+            <div id="tasks">
+
+                <!-- List of tasks user had written -->
+                <div class="task">
+                    <div class="content">
+                        <input 
+                            type="text"
+                            class="text"
+                            value="My Shiny Task"
+                            readonly
+                        />
+                    </div>
+                    <!-- edit and delete buttons -->
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
     
 </body>
 </html>
