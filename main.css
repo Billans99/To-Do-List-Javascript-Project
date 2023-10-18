@@ -71,11 +71,11 @@ input, button {
    font-weight: 700;
 }
 
-#new-task-submit:hover {
+.task .actions button:hover {
     opacity: 0.8;
 }
 
-#new-task-submit:active {
+.task .actions button:active {
     opacity: 0.6;
 }
 
@@ -85,4 +85,71 @@ main {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
+}
+
+.task-list {
+    padding: 1rem;
+
+}
+
+.task-list h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content {
+    flex: 1 1 0%;
+}
+
+#tasks .task .content .text {
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only) {
+    color: var(--pink);
+}
+
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+#new-task-submit:hover {
+    opacity: 0.8;
+}
+
+#new-task-submit:active {
+    opacity: 0.6;
+}
+
+.task .actions .edit {
+    color: #FFF;
+}
+
+.task .actions .delete {
+    color: crimson;
 }
